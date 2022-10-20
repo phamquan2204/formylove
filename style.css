@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.heart-container {
+  /* min-width: 1080px;
+  min-height: 500px; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heart {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heart-container > .heart > img {
+  width: 20%;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.btn {
+  margin: 2%;
+  padding: 1rem;
+  background-color: red;
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(131, 28, 28) 0%,
+    rgb(131, 28, 28, 0.8) 51%,
+    rgba(131, 28, 28, 0.6) 100%
+  );
+}
+
+.heart-item {
+  margin: 5%;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  transform: rotate(135deg);
+  animation: heartBeat 1s ease infinite;
+  background-color: red;
+}
+
+.heart-item::after,
+.heart-item::before {
+  width: 100px;
+  height: 100px;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+  overflow: hidden;
+}
+
+.heart-item::before {
+  left: -50px;
+}
+
+.heart-item::after {
+  top: 50px;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1) rotate(135deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(135deg);
+  }
+  100% {
+    transform: scale(1) rotate(135deg);
+  }
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container {
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.img-btn {
+  width: 2rem;
+  height: 3rem;
+  color: #fff;
+  background-image: linear-gradient(
+    to top,
+    rgb(125, 125, 125),
+    rgb(91, 91, 91)
+  );
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+}
+
+.img-btn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(125, 125, 125),
+    rgb(91, 91, 91)
+  );
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.imgList {
+  width: 50%;
+}
+
